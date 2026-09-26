@@ -1,0 +1,108 @@
+slug: the-human-use-of-human-beings
+title_zh: 人人有人的用处
+title_original: "The Human Use of Human Beings: Cybernetics and Society"
+author: Norbert Wiener
+first_published: 1950
+edition_used: "1954 修订版正文（Free Association Books 1989 重印，含 Steve J. Heims 导言）"
+
+public_domain:
+  status: unverified
+  channels_tried:
+    - "斯坦福版权续期数据库 collections.stanford.edu —— 域名已无法解析，项目实质下线"
+    - "美国版权局公共目录 publicrecords.copyright.gov —— 纯 JS 应用，抓取失败"
+    - "archive.org（Catalogue of Copyright Entries 扫描件）—— 不可达"
+    - "常规网页搜索 —— 未找到该书的具体续期登记记录"
+  conclusion: >
+    未查证。1950 年初版若已续期，美国公有领域时间为 2046-01-01（1950+95）；
+    若未续期，则依旧法 §304(a) 早已于 1979-01-01 进入公有领域。
+    两者相差 67 年，直接决定本书全文能否公开，必须查明。
+  indirect_evidence: >
+    该书仍在商业销售（ISBN 9780306803208），Internet Archive 有受控借阅扫描本。
+    两项均强烈暗示仍在版权期内。这是推测，不是确证。
+  next_channel: "Google Books 的 Copyright Search（可全文检索 Catalogue of Copyright Entries 扫描件），续期登记应见于 1977–1978 年卷册"
+  rule: "在 status 变为 verified_public_domain 之前，本书全文不得进入公开仓库"
+
+files:
+  original:
+    location: private
+    path_hint: "The Human Use of Human Beings - Cybernetics and Society (Norbert Wiener).pdf"
+    bytes: 2595270
+    sha256: 45d6aa31f5d4231c3207c96d0c624cbd6ca4a1f368542e44276f56a2ec110ce4
+    pdf_pages: 225
+    body_words: 61868
+  translation:
+    location: private
+    path_hint: "人人有人的用处-编译本.md"
+    bytes: 266398
+    sha256: 125207ed1d6b82a829c605bb69af14b6f454c0944c38844764ea4eb49f05cfdb
+    lines: 937
+    zh_chars: 79947
+
+page_mapping:
+  formula: "book_page = pdf_page - 26"
+  verified_by: "PDF 34 页眉印 8、PDF 35 印 9、PDF 213 印 187，三者均满足"
+  front_matter: "PDF 1-32（封面、版权、传记小注、Heims 导言、附录）。PDF 32 是 31 的重复印张"
+  body: "PDF 33-219（原序 33-38、第 I-XI 章 41-219）"
+  back_matter: "PDF 220-225（索引）"
+
+structure:
+  chapters_total: 12
+  chapter_alignment: "12/12 标题严格一一对应，无缺失、无多余、无重排、无合并"
+  original_paragraphs: 547
+  translation_paragraphs: 420
+  note: >
+    译本存在系统性的「两段并一段」，集中在第二、三、四章。第一章的合并位于
+    原文第 13/14 段，造成其后段落全体错位一格，直到章末第 31 段才复位。
+
+current_translation:
+  version: v1
+  run: 2026-09-26T1816-glm-flash-translate-v1
+  provenance_completeness: partial
+  fidelity_target: compromise
+  fidelity_target_note: >
+    提示词同时要求「保留原滋原味」与「避免机翻味」，这是方向相反的两个要求
+    且未给出优先级。因此目标值记为 compromise——不是模型选择了折中，
+    而是提示词本身没有给出判断依据，模型只能自行权衡。详见 prompts/ 下的存档。
+  human_edit_level: none
+
+scan_quality:
+  note: >
+    原书是扫描件，其文本层不可完全信赖。抽样比对发现词级错误与行序错乱，
+    并已确认数处「可见页面与文本层不一致」的情况——例如 p88 肉眼为
+    flight conditions，文本层给出 Hight conditions。
+  consequence: >
+    任何基于字词的结论（尤其涉及误译认定的）都必须回原书页面核对，
+    不得仅依据抽取文本。具体数字与核对过程见仓库根目录 CHANGELOG.md。
+
+excluded_content:
+  - what: "Steve J. Heims 导言"
+    words: 4441
+    pdf_pages: "11-23"
+    reason: "1989 年第三方所写，不属维纳原文"
+  - what: "Heims 附录（两份文献）"
+    words: 1516
+    pdf_pages: "25-30"
+    reason: "编者附加材料"
+  - what: "传记小注（BIOGRAPHICAL NOTES）"
+    words: 419
+    pdf_pages: "9-10"
+  - what: "索引（INDEX）"
+    words: 1842
+    pdf_pages: "220-225"
+    reason: "译本末行明确注明「原书另附人名与主题索引，此处从略」"
+  - what: "原书脚注"
+    count: 2
+    reason: "全书仅 2 处脚注（p60 Ashby 书目、p119 爱因斯坦格言）；原序那条被译成译本 L72 的块引用备注"
+
+added_content:
+  - what: "译名对照表"
+    location: "译本 L10-36"
+  - what: "编者补注（含《世界报》引文讨论）"
+    location: "译本 L862-868"
+  - what: "末段说明「全书终，索引从略」"
+    location: "译本 L936"
+
+history:
+  - run: 2026-09-26T1816-glm-flash-translate-v1
+    operation: translate
+    summary: "首版译本（GLM 直出，未人工修订）"

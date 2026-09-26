@@ -1,0 +1,59 @@
+run_id: 2026-09-26T1816-glm-flash-translate-v1
+date: 2026-09-26
+time_local: "18:16"
+operation: translate
+author: dgxdn
+status: completed
+
+model:
+  name: "GLM-5.3-flash"
+  name_verified: false
+  provider: "智谱（据名称推断，未核实）"
+  version_note: >
+    用户口述的模型名称为 GLM-5.3-flash，原样记录，未作任何「纠正」。
+    已知智谱模型命名通常形如 glm-4-flash / glm-4-plus，
+    GLM-5.3-flash 这一写法未能核实是否存在，也可能是更新或内部版本。
+
+input:
+  source_edition: "1954 修订版正文（Free Association Books 1989 重印）"
+  source_file: "The Human Use of Human Beings - Cybernetics and Society (Norbert Wiener).pdf"
+  source_sha256: 45d6aa31f5d4231c3207c96d0c624cbd6ca4a1f368542e44276f56a2ec110ce4
+
+output:
+  file: "人人有人的用处-编译本.md"
+  sha256: 125207ed1d6b82a829c605bb69af14b6f454c0944c38844764ea4eb49f05cfdb
+  bytes: 266398
+  lines: 937
+  note: "全文不入库。本记录只保存校验值，以便他人核查所分析的对象是哪一份文件。"
+
+prompt:
+  template: "prompts/译本提示词.md"
+  document: "v1 —— 实际使用的提示词"
+  verbatim: true
+  verbatim_note: >
+    提示词原样存档，包括其中疑为误留的 /Grilling 前缀。保留缺陷是有意为之：
+    它是历史事实，也是本译本风格漂移的可查证原因之一。
+  known_issues:
+    - "开头有无关前缀 /Grilling，与翻译任务无关，疑为复用他处提示词时误留。"
+    - "「保留原滋原味」与「避免机翻味」是方向相反的要求，未给出优先级。"
+    - "未指定术语处理、脚注与索引是否保留、分段与合段策略，实际均由模型自行决定。"
+
+scope:
+  chapters: "原序 + 第 I–XI 章"
+  not_covered: "Heims 导言、Heims 附录、传记小注、索引"
+  single_pass: true
+
+human_edit_after:
+  level: none
+  detail: "AI 直出，无人工修订。level 显式写 none 而非留空——留空与「没改」是两件不同的事。"
+
+provenance_completeness: partial
+provenance_note: >
+  记为 partial 而非 unknown 的依据：模型名（用户口述）、日期、源文件与其
+  SHA-256、产出文件与其 SHA-256 均已确知。
+  未达 full 的原因：无法确知服务商与具体模型版本、无采样参数记录、
+  无运行日志、无法确知是否为多轮对话累积产出。
+
+unverifiable:
+  - "采样参数（温度等）"
+  - "是否为多轮对话累积产出，以及对话中是否传递了额外上下文"
