@@ -48,11 +48,13 @@ page_mapping:
 structure:
   chapters_total: 12
   chapter_alignment: "12/12 标题严格一一对应，无缺失、无多余、无重排、无合并"
-  original_paragraphs: 547
-  translation_paragraphs: 420
+  original_paragraphs: 431
+  translation_paragraphs: 424
   note: >
-    译本存在系统性的「两段并一段」，集中在第二、三、四章。第一章的合并位于
-    原文第 13/14 段，造成其后段落全体错位一格，直到章末第 31 段才复位。
+    2026-09-27 按段落边界与页面坐标重审 12 个标题后，原文正文 431 段、译本对应正文 424 段；
+    原书两处未译脚注（PDF 60、119）和译本末尾索引说明分别单列，不计入对应正文段落数。
+    首轮记载的原文 547 段无法按本次版面规则复现。PDF 204 页缩进引文曾被坐标法误切，
+    已目视核对并按其中的实际段界重计。具体逐章数字与差异位置见 diffs/differences.yaml。
 
 current_translation:
   version: v1
@@ -97,8 +99,6 @@ excluded_content:
 added_content:
   - what: "译名对照表"
     location: "译本 L10-36"
-  - what: "编者补注（含《世界报》引文讨论）"
-    location: "译本 L862-868"
   - what: "末段说明「全书终，索引从略」"
     location: "译本 L936"
 
