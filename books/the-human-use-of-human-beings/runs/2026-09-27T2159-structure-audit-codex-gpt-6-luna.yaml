@@ -1,0 +1,50 @@
+run_id: 2026-09-27T2159-structure-audit-codex-gpt-6-luna
+date: 2026-09-27
+time_local: "21:59"
+operation: structural_audit
+status: completed
+
+harness:
+  name: Codex
+  type: model-calling platform
+  name_source: user-reported
+
+model:
+  name: gpt-6-luna
+  name_as_reported: gpt6Luna
+  name_source: user-reported
+  reasoning_effort: medium
+  reasoning_effort_source: user-reported
+
+input:
+  source_edition: "1954 修订版正文（Free Association Books 1989 重印）"
+  source_file: "The Human Use of Human Beings - Cybernetics and Society (Norbert Wiener).pdf"
+  source_sha256: 45d6aa31f5d4231c3207c96d0c624cbd6ca4a1f368542e44276f56a2ec110ce4
+  translation_file: "人人有人的用处-编译本.md"
+  translation_sha256: 125207ed1d6b82a829c605bb69af14b6f454c0944c38844764ea4eb49f05cfdb
+
+scope:
+  chapters: "原序 + 第 I–XI 章（12 个标题）"
+  audit_type: "段落结构差异：边界、数量、顺序及脚注/增补/省略"
+  excluded: "语义准确度、误译、术语与逐句忠实度"
+
+method:
+  harness: "本次所用模型平台为 Codex；没有专用自动化审计程序。"
+  procedure: >
+    按 spec/差异分类.md 逐章对照译文与原文；以页面位置和段落版面边界
+    识别段落，OCR 文本与长度比例只辅助定位，关键边界回看原书 PDF 页面。
+  result: "原文 431、译文 424 个对齐段落单元；记录 17 处合并、9 处拆分、1 处脚注体例变更、2 处增补与 5 处省略。"
+
+outputs:
+  - "books/the-human-use-of-human-beings/diffs/differences.yaml"
+  - "books/the-human-use-of-human-beings/meta.yaml"
+  - "books/the-human-use-of-human-beings/差异说明.md"
+  - "README.md"
+  - "CHANGELOG.md"
+
+commit: 387beea
+provenance_completeness: partial
+provenance_note: >
+  harness、模型名称与推理强度来自用户对本次会话运行环境的说明。
+  记录了审计范围、核对方法与输出；没有保存对话日志或完整逐步审计轨迹，
+  因此该记录不能单独重放本次审计。

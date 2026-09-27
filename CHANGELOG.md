@@ -10,6 +10,8 @@
 
 ## 2026-09-27 · 全章节结构重审
 
+本次运行的 harness、模型、强度、范围与方法见 [独立运行记录](books/the-human-use-of-human-beings/runs/2026-09-27T2159-structure-audit-codex-gpt-6-luna.yaml)。
+
 ### 重审范围与口径
 
 按 [spec/差异分类.md](spec/差异分类.md) 的规则，对原序和第 I–XI 章逐章核对段落边界、数量与顺序。
